@@ -8,7 +8,7 @@ import java.util.*;
 
 public class Helper {
 
-    protected static final File temp = new File("." + File.separator + "temp" + File.separator);
+    public static final File temp = new File("." + File.separator + "temp" + File.separator);
 
     public static boolean makeSureDirectoryExists(File dir) {
         if (!dir.exists()) {
@@ -46,7 +46,7 @@ public class Helper {
         return dir.delete();
     }
 
-    protected static List<Object> loadObjectFromFile(File file) {
+    public static List<Object> loadObjectFromFile(File file) {
         FileInputStream fis = null;
         ObjectInputStream ois = null;
         try {
@@ -70,7 +70,7 @@ public class Helper {
         return null;
     }
 
-    protected static boolean saveObjectToFile(File file, List<Object> objects) {
+    public static boolean saveObjectToFile(File file, List<Object> objects) {
         FileOutputStream fos = null;
         ObjectOutputStream oos = null;
         try {
@@ -117,7 +117,7 @@ public class Helper {
         return new File(url.toString().substring(url.toString().lastIndexOf("/") + 1));
     }
 
-    static File extractMediaThumbNameFromURL(URL url) {
+    public static File extractMediaThumbNameFromURL(URL url) {
         return new File("thumb" + url.toString().substring(url.toString().lastIndexOf(".")));
     }
 
@@ -186,7 +186,7 @@ public class Helper {
         temp_file.renameTo(dir_file);
     }
 
-    static void copyStoreImageToLocation(String src, File dir) {
+    public static void copyStoreImageToLocation(String src, File dir) {
         Helper.makeSureDirectoryExists(dir);
         copyFile(new File(src), new File(dir, new File(src).getName()));
     }
