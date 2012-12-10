@@ -161,3 +161,21 @@ pip-log.txt
 
 # Mac crap
 .DS_Store
+
+# NetBeans specific #
+nbproject/
+nbproject/private/
+build/
+dist/
+
+build.xml
+manifest.mf
+
+# Form Files #
+*.form
+
+# Class Files #
+*.class
+
+# Package Files #
+*.jar
