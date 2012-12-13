@@ -98,7 +98,7 @@ public class Main {
             if (gui != null) {
                 gui.setMaxProgress(start_page - end_page);
             }
-            for (int i = end_page; i >= start_page; i--) {
+            for (int i = start_page; i >= end_page; i--) {
                 Main.handleURL(String.format("http://%s.tumblr.com/page/%s", Main.blogname, i));
                 if (gui != null) {
                     gui.setProgress(progress);
